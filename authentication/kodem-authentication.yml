@@ -1,0 +1,42 @@
+generated: '2026-07-19'
+method: probed
+source: live HTTP probes of https://api.kodemsecurity.com (no OpenAPI is published, so no securitySchemes
+  could be derived)
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+  oauth2_flows: []
+  fully_gated: true
+schemes:
+- name: x-kodem-apikey
+  type: apiKey
+  in: header
+  parameter_name: x-kodem-apikey
+  confidence: probed
+  evidence: 'Advertised in the CORS access-control-allow-headers of the API host response: content-type,
+    authorization, x-kodem-apikey, user-agent, dnt, sec-ch-ua, sec-ch-ua-mobile, sec-ch-ua-platform.'
+- name: authorization
+  type: http
+  scheme: unknown
+  confidence: probed
+  evidence: 'The authorization header is also advertised in access-control-allow-headers, but the scheme
+    (bearer/basic) is not observable without a credential and is not documented publicly.'
+posture:
+  unauthenticated_status: 401
+  unauthenticated_body: '{"detail":"Unauthorized"}'
+  paths_probed: 17
+  paths_reachable_unauthenticated: 0
+  allowed_methods:
+  - GET
+  - POST
+  - PUT
+  - DELETE
+  - OPTIONS
+  allow_credentials: true
+  notes: 'Every path probed on api.kodemsecurity.com — including /, /openapi.json, /swagger.json, /docs,
+    /redoc, /health, /v1 and /.well-known/* — returns 401 with the same JSON envelope. The API is real
+    and actively served but entirely closed to unauthenticated discovery; no public reference, OpenAPI
+    document, or auth guide is published. Product documentation sits behind the application login at
+    docs.kodemsecurity.com, which redirects unauthenticated visitors to app.kodemsecurity.com.'
