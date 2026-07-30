@@ -1,27 +1,106 @@
 aid: kodem
 name: Kodem
-description: 'Kodem is a company surfaced as a portfolio company of greylock and added to the API Evangelist
-  network as a stub for enrichment. Sector: cybersecurity. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: 'Kodem Security is an AI-native application security platform built on runtime intelligence,
+  founded in 2021 by Aviv Mussinger, Idan Bartura, and Pavel Furman. Kodem connects code analysis, runtime
+  evidence, AI reasoning, and runtime protection into a single system so security teams prioritize and
+  fix what is actually exploitable in production rather than triaging every theoretical finding. The platform
+  spans runtime-powered software composition analysis (SCA) across transitive and OS-level dependencies,
+  native SAST powered by Opengrep with 1,000+ rules plus secrets detection, and Application Detection &
+  Response (ADR) that detects exploit attempts at the application layer without signatures. Its AI layer,
+  Kai, is grounded in function-level runtime evidence to accelerate triage, prioritization, and repository-grounded
+  remediation. Kodem is SOC 2 Type II and deploys across cloud and on-premise environments in about five
+  minutes.'
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://cdn.prod.website-files.com/63da9726cdbeda469366f7f2/69446ff571232a027ec80a33_kodem-global-opengraph.png
 url: https://raw.githubusercontent.com/api-evangelist/kodem/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - greylock
-x-tier: stub
-x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Cybersecurity
-apis: []
+- Application Security
+- Runtime Security
+- Software Composition Analysis
+- Static Analysis
+- Vulnerability Management
+- DevSecOps
+- SBOM
+- AI Security
+apis:
+- aid: kodem:kodem-api
+  name: Kodem API
+  description: 'The Kodem platform API. The service is reachable at https://api.kodemsecurity.com and is
+    fully authenticated — every path returns HTTP 401 with a JSON {"detail":"Unauthorized"} envelope until
+    a credential is supplied. The CORS preflight advertises an x-kodem-apikey request header alongside
+    authorization, and the allowed methods are GET, POST, PUT, DELETE, and OPTIONS. No OpenAPI, Swagger,
+    or public reference is published; product documentation sits behind the application login at docs.kodemsecurity.com.'
+  humanURL: https://docs.kodemsecurity.com/
+  baseURL: https://api.kodemsecurity.com
+  tags:
+  - Application Security
+  - Runtime Security
+  - Vulnerability Management
+  properties:
+  - type: Authentication
+    url: authentication/kodem-authentication.yml
+common:
+- type: Website
+  url: https://www.kodemsecurity.com/
+- type: DeveloperPortal
+  url: https://app.kodemsecurity.com/
+- type: Documentation
+  url: https://docs.kodemsecurity.com/
+- type: SignUp
+  url: https://app.kodemsecurity.com/
+- type: Pricing
+  url: https://www.kodemsecurity.com/pricing
+- type: PrivacyPolicy
+  url: https://www.kodemsecurity.com/privacy-policy
+- type: Blog
+  url: https://www.kodemsecurity.com/resources
+- type: Support
+  url: https://www.kodemsecurity.com/book-a-demo
+- type: LinkedIn
+  url: https://www.linkedin.com/company/kodem/
+- type: StatusPage
+  url: https://status.kodemsecurity.com/
+- type: Compliance
+  url: conformance/kodem-conformance.yml
+- type: LLMsTxt
+  url: llms/kodem-llms.txt
+- type: WellKnown
+  url: well-known/kodem-well-known.yml
+- type: Authentication
+  url: authentication/kodem-authentication.yml
+- type: Conformance
+  url: conformance/kodem-conformance.yml
+- type: Lifecycle
+  url: lifecycle/kodem-lifecycle.yml
+- type: DomainSecurity
+  url: security/kodem-domain-security.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-common:
-- type: Website
-  url: https://www.kodemsecurity.com/
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
