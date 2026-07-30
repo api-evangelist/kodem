@@ -1,0 +1,54 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.kodemsecurity.com/llms.txt and the sitewide AICPA SOC badge in the kodemsecurity.com
+  footer
+compliance_program:
+  published: true
+  certifications:
+  - name: SOC 2 Type II
+    status: attested
+    evidence: 'Stated verbatim in the provider-authored /llms.txt ("SOC 2 Type II") and displayed as an
+      AICPA SOC badge in the sitewide footer.'
+    source: https://www.kodemsecurity.com/llms.txt
+  trust_center: null
+  notes: 'No dedicated trust center, compliance page, or downloadable report portal was found. trust.kodemsecurity.com
+    and security.kodemsecurity.com resolve but serve the same wildcard application shell as app.kodemsecurity.com,
+    not real trust content. SOC 2 Type II is the only named certification Kodem publishes about itself.'
+standards:
+- id: soc2-type2
+  conforms: true
+  evidence: provider-published claim in /llms.txt and footer AICPA SOC badge
+- id: oauth2
+  conforms: false
+  evidence: no OAuth surface documented; the API advertises an x-kodem-apikey header
+- id: oidc
+  conforms: false
+  evidence: /.well-known/openid-configuration returns 404 on the web host and 401 on the API host
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: /.well-known/security.txt returns 404
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: 'unauthenticated errors use a {"detail": "..."} envelope with content-type application/json,
+    not application/problem+json'
+- id: rfc8414-oauth-metadata
+  conforms: false
+  evidence: /.well-known/oauth-authorization-server not served
+- id: llms-txt
+  conforms: true
+  evidence: a real hand-authored /llms.txt is published and captured at llms/kodem-llms.txt
+- id: openapi
+  conforms: false
+  evidence: no OpenAPI/Swagger document published; every spec path on the API host is gated behind 401
+customer_facing_frameworks:
+  notes: 'Kodem markets compliance-support capabilities to its customers — PCI DSS 4.0 requirement 6.3.2,
+    DORA ICT risk, ISO 42001, FedRAMP RFC-0012 and SBOM/VEX material appear across its resources and
+    landing pages. These describe what the product helps customers evidence and are NOT certifications
+    held by Kodem itself; they are recorded here separately so they are never mistaken for provider
+    attestations.'
+  referenced:
+  - PCI DSS 4.0
+  - DORA
+  - ISO 42001
+  - FedRAMP
+  - SBOM/VEX

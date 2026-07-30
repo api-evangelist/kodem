@@ -1,0 +1,31 @@
+generated: '2026-07-19'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.kodemsecurity.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 14 00:19:16 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+- host: docs.kodemsecurity.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Aug 25 13:31:50 2026 GMT
+  hsts: true
+  hsts_max_age: 15724800
+- host: api.kodemsecurity.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep  1 09:16:09 2026 GMT
+  hsts: true
+  hsts_max_age: 15724800
+  note: HSTS observed on the authenticated 401 response (strict-transport-security max-age=15724800;
+    includeSubDomains); the unauthenticated HEAD probe did not surface the header.
+domains:
+- domain: kodemsecurity.com
+  dnssec: true
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: reject

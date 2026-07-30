@@ -1,0 +1,39 @@
+generated: '2026-07-19'
+method: searched
+source: live probes of the Kodem web and API hosts
+notes: 'Kodem publishes no /.well-known/ discovery surface on either host. The marketing host returns
+  404 for every well-known path probed. The API host is blanket-authenticated and answers HTTP 401 with
+  a JSON {"detail":"Unauthorized"} body for every path including /.well-known/*, so a well-known document
+  cannot be distinguished from any other gated route there. A real, hand-authored /llms.txt IS published
+  on the marketing host and is captured verbatim at llms/kodem-llms.txt.'
+hosts:
+- host: https://www.kodemsecurity.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /llms.txt
+    status: 200
+    file: ../llms/kodem-llms.txt
+  - path: /robots.txt
+    status: 200
+  - path: /sitemap.xml
+    status: 200
+- host: https://api.kodemsecurity.com
+  gated: true
+  documents:
+  - path: /.well-known/security.txt
+    status: 401
+  - path: /.well-known/openid-configuration
+    status: 401
+  - path: /.well-known/oauth-authorization-server
+    status: 401
+  - path: /.well-known/api-catalog
+    status: 401

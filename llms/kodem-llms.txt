@@ -1,0 +1,49 @@
+# Kodem Security
+> Kodem is an AI-native Application Security platform built on runtime intelligence. It connects code analysis, runtime evidence, AI reasoning, and runtime protection into one system, so security teams prioritize and fix what is actually exploitable in production instead of triaging every theoretical finding.
+Kodem's core idea: runtime provides truth. Static analysis shows what might be vulnerable. Runtime reveals what actually loads, executes, and is exposed. Kodem enriches code and dependency findings with function-level runtime evidence to determine real exploitability, then uses AI (Kai) grounded in that evidence to accelerate remediation. Founded in 2021 by Aviv Mussinger, Idan Bartura, and Pavel Furman. SOC 2 Type II. Deploys in about 5 minutes across cloud and on-premise environments.
+## Products
+- [Open Source Security (SCA)](https://www.kodemsecurity.com/products/dynamic-sca): Runtime-powered software composition analysis. Finds vulnerabilities in open source and transitive dependencies, then confirms which packages load and which vulnerable functions actually run.
+- [Proprietary Code Security (SAST)](https://www.kodemsecurity.com/products/runtime-sast): Native SAST powered by Opengrep with 1,000+ rules, plus secrets detection, correlated with runtime evidence to prioritize reachable, executing code paths.
+- [Application Detection & Response (ADR)](https://www.kodemsecurity.com/products/application-detection-response): Shield detects exploit attempts at the application layer at the moment of initiation, including zero-day and fileless attacks, without signatures.
+## Platform and technology
+- [Kodem Platform](https://www.kodemsecurity.com/platform): The unified code-to-runtime application security platform.
+- [Kodem C.O.R.E.](https://www.kodemsecurity.com/technology/kodem-core): Where code analysis, runtime intelligence, and agentic AI meet.
+- [What sets Kodem apart](https://www.kodemsecurity.com/technology/whatsetskodemapart): Kodem's core differentiator, runtime intelligence as the foundation rather than a feature.
+- [Meet Kai](https://www.kodemsecurity.com/kai): Kodem's AI layer, grounded in runtime evidence for triage, prioritization, and remediation.
+## Definitions
+- [What is runtime intelligence?](https://www.kodemsecurity.com/resources/what-is-runtime-intelligence): Security context derived from how an application actually executes in production, and how it changes prioritization.
+- [What is reachability analysis?](https://www.kodemsecurity.com/resources/what-is-reachability-analysis): Whether vulnerable code can actually be executed; static vs runtime reachability and why it cuts false positives.
+- [What is Application Detection and Response (ADR)?](https://www.kodemsecurity.com/resources/what-is-application-detection-and-response): Detecting attacks inside running application logic, and how ADR differs from WAF, EDR, and RASP.
+## Solutions
+- [Secure open source packages](https://www.kodemsecurity.com/solution/open-source-security-sca): Secure transitive and OS-level dependencies with runtime usage context.
+- [Harden your codebase](https://www.kodemsecurity.com/solution/code-security-sast): AI-assisted static analysis validated against runtime execution.
+- [Secure the AI application stack (AI-SPM)](https://www.kodemsecurity.com/solution/securing-the-ai-application-stack-ai-spm): Protect models, prompts, and plugins, and enforce provenance.
+- [Defend your application](https://www.kodemsecurity.com/solution/defend-your-application): Detect exploits in real time at the application layer.
+- [Detect exposed secrets](https://www.kodemsecurity.com/solution/detect-exposed-secrets): Find keys, tokens, and credentials across code and git history.
+- [Automate vulnerability management](https://www.kodemsecurity.com/solution/automate-vulnerability-management): Neutralize attack chains, not isolated vulnerabilities.
+- [Secure your SDLC](https://www.kodemsecurity.com/solution/secure-your-sdlc): Integrity intelligence across the software supply chain.
+## Comparisons
+- [Kodem vs Snyk](https://www.kodemsecurity.com/alternatives/snyk-alternatives): How runtime intelligence changes prioritization versus Snyk.
+- [Kodem vs Veracode](https://www.kodemsecurity.com/alternatives/veracode-alternatives): Runtime-powered AppSec versus static-first scanning.
+- [Kodem vs Checkmarx](https://www.kodemsecurity.com/alternatives/checkmarx-alternatives): Execution reality versus theoretical severity.
+## Customers
+- [Scaling AppSec accuracy with a two-person team (Whistic)](https://www.kodemsecurity.com/case-studies/scaling-appsec-accuracy-with-a-two-person-team): How a small team scaled accuracy with runtime context.
+- [Scaling AppSec without scaling headcount (Rapyd)](https://www.kodemsecurity.com/case-studies/scaling-appsec-without-scaling-headcount-how-rapyd-used-kodem-to-shift-from-volume-to-impact): Shifting from finding volume to real impact.
+## Selected writing
+- [Repository-grounded vulnerability remediation for AI security engineers](https://www.kodemsecurity.com/resources/repository-grounded-vulnerability-remediation-for-ai-security-engineers): How Kai generates validated, repository-grounded fixes and pull requests.
+- [Agentic AI security: WAF + runtime defense as an AI governance control](https://www.kodemsecurity.com/resources/agentic-ai-security-waf-runtime-defense-as-an-ai-governance-control): Defending vibe-coded apps and supply-chain risk at runtime.
+- [Your AppSec backlog has a shortcut](https://www.kodemsecurity.com/resources/your-appsec-backlog-has-a-shortcut-heres-how-to-find-it): Finding the single actions that cut the most risk.
+- [Snapshot-based SBOM analysis for AWS EC2 Linux VMs](https://www.kodemsecurity.com/resources/snapshot-based-sbom-analysis-for-aws-ec2-linux-vms): SBOM analysis with less scan load and continuous runtime monitoring.
+- [A guide to securing AI code editors](https://www.kodemsecurity.com/resources/a-guide-to-securing-ai-code-editors-cursor-claude-code-gemini-cli-and-openai-codex): Securing Cursor, Claude Code, Gemini CLI, and OpenAI Codex.
+- [Attack chain methodology](https://www.kodemsecurity.com/resources/attack-chain-methodology-aligning-appsec-strategies-with-real-world-threats): Aligning AppSec strategy with real-world exploitation.
+- [Application security in AI, edge, and serverless runtimes](https://www.kodemsecurity.com/resources/application-security-issues-in-ai-edge-and-serverless-runtimes-aws-lambda-vercel-edge-functions-and-cloudflare-workers): Risk in Lambda, Vercel Edge, and Cloudflare Workers.
+- [Agentic red teams are here](https://www.kodemsecurity.com/resources/agentic-red-teams-are-here-autonomous-vulnerability-discovery-ushers-in-a-new-security-paradigm): Autonomous vulnerability discovery and what it changes.
+## Company
+- [Company](https://www.kodemsecurity.com/company): Kodem's story, mission, and team.
+- [Pricing](https://www.kodemsecurity.com/pricing): Plan and packaging overview.
+- [Careers](https://www.kodemsecurity.com/careers): Open roles and life at Kodem.
+- [Book a demo](https://www.kodemsecurity.com/book-a-demo): Request a personalized demo.
+## Optional
+- [Blog (all posts)](https://www.kodemsecurity.com/resources): Full archive of Kodem research and product writing.
+- [Docs and videos](https://www.kodemsecurity.com/documents): How-to material and product walkthroughs.
+- [Sitemap](https://www.kodemsecurity.com/sitemap.xml): Complete list of indexable pages.

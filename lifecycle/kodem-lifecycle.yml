@@ -1,0 +1,29 @@
+generated: '2026-07-19'
+method: searched
+source: live probes of kodemsecurity.com and status.kodemsecurity.com
+status_page: https://status.kodemsecurity.com/
+status_page_detail:
+  http_status: 200
+  title: Status Page
+  rendering: client-side JavaScript application; component/incident detail is not available to an
+    unauthenticated fetch
+versioning:
+  scheme: unknown
+  current: null
+  docs: null
+  notes: No public versioning policy is published. The API host exposes no version-prefixed path that
+    is reachable unauthenticated (/v1 and /api/v1 both return 401), so a URI-path scheme can be
+    neither confirmed nor ruled out.
+deprecation:
+  policy_url: null
+  sunset_header: null
+  notes: No deprecation or sunset policy published; RFC 8594 Sunset/Deprecation header support could
+    not be observed because every response to an unauthenticated request is a 401.
+sla:
+  url: null
+  uptime_target: null
+deprecated_operations: []
+notes: 'Kodem publishes a real status page but no changelog, versioning policy, deprecation policy, or
+  SLA on its public surface. Product updates are communicated as periodic "Kodem Kernels" blog posts
+  under /resources rather than as a dated, structured release-notes feed, so no ChangeLog artifact was
+  created — see the Blog pointer in apis.yml instead.'
