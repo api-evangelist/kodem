@@ -54,6 +54,7 @@ tags:
 - DevSecOps
 - SBOM
 - AI Security
+- Developer Tools
 apis:
 - aid: kodem:kodem-api
   name: Kodem API
