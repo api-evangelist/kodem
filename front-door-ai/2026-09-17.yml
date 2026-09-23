@@ -1,0 +1,29 @@
+# Front Door AI Index — kodem — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: kodem
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.kodemsecurity.com
+  final_host: www.kodemsecurity.com
+  ownership: own
+  owner: kodem
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 22
+  host_score: 22
+  density: 30.47
+  words: 722
+  tiers:
+    agentic: 4
+    core: 18
+    model: 0
+  ambiguous: 18
+  top_terms:
+    AI: 18
+    agent: 15
+    AI agent: 3
+    intelligence: 3
+    MCP: 1
