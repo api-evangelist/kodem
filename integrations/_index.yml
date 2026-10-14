@@ -15,3 +15,27 @@
   relationship: distribution-channel
   status: not-a-workflow
   arazzo: null
+- slug: kodem-github-marketplace-apps
+  label: GitHub Marketplace (apps)
+  partner: github
+  partner_name: GitHub Marketplace (apps)
+  type: marketplace
+  marketplace: github-apps
+  channel: partner-built
+  evidence: https://github.com/marketplace/kodem-security
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: kodem-atlassian-marketplace
+  label: Atlassian Marketplace
+  partner: atlassian
+  partner_name: Atlassian Marketplace
+  type: marketplace
+  marketplace: atlassian
+  channel: partner-built
+  evidence: https://marketplace.atlassian.com/vendors/1222917/kodem-security
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null

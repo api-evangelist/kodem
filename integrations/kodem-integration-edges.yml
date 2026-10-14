@@ -2,6 +2,8 @@ generated: '2026-10-13'
 method: searched
 checked:
 - https://azuremarketplace.microsoft.com/
+- https://github.com/marketplace?type=apps
+- https://marketplace.atlassian.com/
 marketplace_apps: []
 edges:
 - partner_name: Microsoft Azure Marketplace
@@ -19,3 +21,40 @@ edges:
   seller_name: Kodem Security
   detected_by: sweep-cloud-marketplaces.py
   detected: '2026-10-13'
+- partner_name: GitHub Marketplace (apps)
+  partner: github
+  partner_match: aggregator
+  type: marketplace
+  marketplace: github-apps
+  channel: partner-built
+  relationship: platform-app
+  direction: third-party
+  evidence: https://github.com/marketplace/kodem-security
+  listing_count: 1
+  apps:
+  - Kodem Security
+  publisher_name: Kodem Security
+  badges:
+  - Verified creator
+  - Verified domain
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: Atlassian Marketplace
+  partner: atlassian
+  partner_match: aggregator
+  type: marketplace
+  marketplace: atlassian
+  channel: partner-built
+  relationship: platform-app
+  direction: third-party
+  evidence: https://marketplace.atlassian.com/vendors/1222917/kodem-security
+  listing_count: 2
+  apps:
+  - Kodem Integration for Jira Cloud
+  - Kodem Integration for Bitbucket Cloud
+  publisher_name: Kodem Security
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+source:
+- https://github.com/marketplace?type=apps
+- https://marketplace.atlassian.com/
