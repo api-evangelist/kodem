@@ -55,6 +55,6 @@
     registered_name: com.kodemsecurity/kodem
     register_id: com.kodemsecurity/kodem
     detected_by: sweep-agent-tools.py
-    detected: '2026-10-14'
+    detected: '2026-10-15'
   status: not-a-workflow
   arazzo: null

@@ -71,7 +71,7 @@ edges:
     registered_name: com.kodemsecurity/kodem
     register_id: com.kodemsecurity/kodem
     detected_by: sweep-agent-tools.py
-    detected: '2026-10-14'
+    detected: '2026-10-15'
   mcp_registry:
     servers:
     - com.kodemsecurity/kodem
