@@ -5,6 +5,8 @@ checked:
 - https://github.com/marketplace?type=apps
 - https://marketplace.atlassian.com/
 - https://registry.modelcontextprotocol.io/v0/servers
+- jetbrains/integrations/jetbrains-integration-edges.yml
+- vs-code-marketplace/integrations/vs-code-marketplace-integration-edges.yml
 marketplace_apps: []
 edges:
 - partner_name: Microsoft Azure Marketplace
@@ -71,7 +73,7 @@ edges:
     registered_name: com.kodemsecurity/kodem
     register_id: com.kodemsecurity/kodem
     detected_by: sweep-agent-tools.py
-    detected: '2026-10-15'
+    detected: '2026-10-19'
   mcp_registry:
     servers:
     - com.kodemsecurity/kodem
@@ -87,6 +89,45 @@ edges:
   - namespace-domain
   detected_by: sweep-agent-tools.py
   first_seen: '2026-10-14'
+- partner_name: JetBrains (jetbrains-marketplace)
+  partner: jetbrains
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: jetbrains-marketplace
+  evidence: https://plugins.jetbrains.com/vendor/kodem-security
+  mirror_of: jetbrains/integrations/jetbrains-integration-edges.yml
+  apps:
+  - Kodem
+  listing_count: 1
+  detected: '2026-10-20'
+  detected_by: mirror-platform-listings.py
+  category: IDE / developer extension marketplace listing
+  badges:
+  - Verified vendor
+- partner_name: VS Code Marketplace (vs-code-marketplace)
+  partner: vs-code-marketplace
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: vs-code-marketplace
+  evidence: https://marketplace.visualstudio.com/publishers/KodemSecurity
+  mirror_of: vs-code-marketplace/integrations/vs-code-marketplace-integration-edges.yml
+  apps:
+  - Kodem
+  listing_count: 1
+  detected: '2026-10-20'
+  detected_by: mirror-platform-listings.py
+  category: IDE / developer extension marketplace listing
+  badges:
+  - Verified publisher
+  - Verified domain
 source:
 - https://github.com/marketplace?type=apps
 - https://marketplace.atlassian.com/
